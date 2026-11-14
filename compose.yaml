@@ -9,7 +9,7 @@ services:
     devices:
       - /dev/dri:/dev/dri
     volumes:
-      - /mnt/jellyfin:/config
+      - /mnt/services/jellyfin:/config
       - /mnt/media/Movies:/data/movies
       - /mnt/media/Music:/data/music
       - /mnt/media/TV Shows:/data/tvshows
