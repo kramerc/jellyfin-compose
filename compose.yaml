@@ -11,7 +11,10 @@ services:
       - 44  # video
       - 993 # render
     volumes:
-      - /mnt/services/jellyfin/config:/config
+      - ./config:/config
+      - /mnt/services/jellyfin/config/metadata:/config/metadata
+      - /mnt/services/jellyfin/config/data/metadata:/config/data/metadata
+      - /mnt/services/jellyfin/config/data/trickplay:/config/data/trickplay
       - /mnt/services/jellyfin/cache:/cache
       - /mnt/media/Movies:/data/movies
       - /mnt/media/Music:/data/music
