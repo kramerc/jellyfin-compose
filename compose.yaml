@@ -1,7 +1,7 @@
 services:
   jellyfin:
     image: jellyfin/jellyfin
-    user: 1451001103:1451000513
+    user: "1451001103:1451000513"
     environment:
       - JELLYFIN_PublishedServerUrl=https://jellyfin.kekra.net
       - TZ=America/Los_Angeles
@@ -12,7 +12,6 @@ services:
       - 993 # render
     volumes:
       - /mnt/services/jellyfin/config:/config
-      - ./data:/config/data
       - /mnt/services/jellyfin/cache:/cache
       - /mnt/media/Movies:/data/movies
       - /mnt/media/Music:/data/music
