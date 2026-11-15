@@ -7,8 +7,12 @@ services:
       - TZ=America/Los_Angeles
     devices:
       - /dev/dri:/dev/dri
+    group_add:
+      - video
+      - render
     volumes:
       - /mnt/services/jellyfin/config:/config
+      - ./data:/config/data
       - /mnt/services/jellyfin/cache:/cache
       - /mnt/media/Movies:/data/movies
       - /mnt/media/Music:/data/music
