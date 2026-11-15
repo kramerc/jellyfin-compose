@@ -8,8 +8,8 @@ services:
     devices:
       - /dev/dri:/dev/dri
     group_add:
-      - video
-      - render
+      - 44  # video
+      - 993 # render
     volumes:
       - /mnt/services/jellyfin/config:/config
       - ./data:/config/data
